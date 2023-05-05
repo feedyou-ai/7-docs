@@ -2,7 +2,7 @@ export * from './completion.js';
 
 export { getDelta, getText } from './util.js';
 
-export { splitTextIntoSentences } from '@7-docs/shared';
+export { splitTextIntoSentences } from '../../shared/src/index.js';
 
 export type {
   MetaData,
@@ -12,7 +12,7 @@ export type {
   ChatCompletionEventData,
   CompletionEventData,
   Usage
-} from '@7-docs/shared';
+} from '../../shared/src/index.js';
 
 export { OpenAI } from './openai/index.js';
 

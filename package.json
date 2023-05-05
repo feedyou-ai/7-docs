@@ -50,7 +50,8 @@
     ]
   },
   "dependencies": {
-    "@7-docs/cli": "0.1.2"
+    "@7-docs/cli": "0.1.2",
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "@pinecone-database/pinecone": "^0.0.14",
