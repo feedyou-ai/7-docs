@@ -1,9 +1,9 @@
-import { uniqueByProperty, getPrompt } from '@7-docs/shared';
+import { uniqueByProperty, getPrompt } from '../../shared/src/index.js';
 import { OpenAI } from './openai/v1/client.js';
 import { isChatCompletionModel } from './openai/v1/util.js';
 import { TransformWithEvent } from './util/stream.js';
 import { getParams, streamResponse } from './util.js';
-import type { MetaData, StreamMetaData } from '@7-docs/shared';
+import type { MetaData, StreamMetaData } from '../../shared/src/index.js';
 import type { ChatCompletionRequestMessage } from 'openai';
 
 interface Options {
@@ -59,7 +59,7 @@ export const getCompletionHandler = (options: Options) => {
       }
 
       if (previousQueries && previousQueries.length > 0) {
-        previousQueries.forEach((previousQuery, index) => {
+        previousQueries.forEach((previousQuery: any, index: any) => {
           messages.push({
             role: 'user',
             content: previousQuery

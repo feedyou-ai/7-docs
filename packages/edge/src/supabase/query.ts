@@ -1,6 +1,6 @@
-import { EMBEDDING_MATCH_COUNT, SUPABASE_SIMILARITY_THRESHOLD } from '@7-docs/shared';
-import { normalizeNamespace } from '@7-docs/shared';
-import type { MetaData } from '@7-docs/shared';
+import { EMBEDDING_MATCH_COUNT, SUPABASE_SIMILARITY_THRESHOLD } from '../../../shared/src/index.js';
+import { normalizeNamespace } from '../../../shared/src/index.js';
+import type { MetaData } from '../../../shared/src/index.js';
 import type { SupabaseClient } from '@supabase/supabase-js';
 
 const defaults = {

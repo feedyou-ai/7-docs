@@ -1,4 +1,4 @@
-import type { ChatCompletionEventData, CompletionEventData, EventData, Params } from '@7-docs/shared';
+import type { ChatCompletionEventData, CompletionEventData, EventData, Params } from '../../shared/src/index.js';
 import type { CreateChatCompletionResponse } from 'openai';
 
 export const getParams = async (req: Request): Promise<Params> => {
@@ -10,7 +10,7 @@ export const getParams = async (req: Request): Promise<Params> => {
     const previousResponses = url.searchParams.getAll('previousResponses');
     const embedding_model = url.searchParams.get('embedding_model') ?? undefined;
     const completion_model = url.searchParams.get('completion_model') ?? undefined;
-    const stream = true;
+    const stream = false;
 
     return {
       query: decodeURIComponent(query),
